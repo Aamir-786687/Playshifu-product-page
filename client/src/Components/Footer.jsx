@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import ap from '../assets/icons8-apple-pay.svg'
 import Mastercard from '../assets/icons8-mastercard.svg'
+import visaa from '../assets/icons8-visa.svg'
+import gpay from '../assets/icons8-google-pay.svg'
 
 const Footer = () => {
   return (
@@ -119,13 +121,14 @@ const Footer = () => {
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm gap-4">
     {/* Copyright + Social Icons */}
     <div className="flex flex-col md:flex-row items-center gap-4">
-      <div className="text-center md:text-left">© 2025 PlayShifu.com</div>
+      
       <div className="flex items-center gap-4">
         <Facebook />
         <Linkedin />
         <Instagram />
         <Youtube />
       </div>
+      <div className="text-center ml-100 md:text-left">© 2025 PlayShifu.com</div>
     </div>
 
     {/* Payment & WhatsApp Icons */}
@@ -139,11 +142,11 @@ const Footer = () => {
         alt="MasterCard"
       />
       <img
-        src="https://img.icons8.com/ios-filled/40/null/visa.png"
+        src={visaa}
         alt="Visa"
       />
       <img
-        src="https://img.icons8.com/ios-filled/40/null/google-pay.png"
+        src={gpay}
         alt="Google Pay"
       />
       
