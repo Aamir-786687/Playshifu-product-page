@@ -53,7 +53,6 @@ const ProductInfo = () => {
           ))}
         </ul>
       </div>
-
       <button className="bg-[#5f125c] text-white text-[10px] font-semibold p-2 rounded-full w-90">Add to Cart </button>
     </div>
   );
