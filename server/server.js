@@ -49,6 +49,18 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model("Product", productSchema);
 
+
+
+
+app.get("/", async (req, res) => {
+  try {
+    res.json({"status":"working"});
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
 // API Routes
 app.get("/api/products", async (req, res) => {
   try {
