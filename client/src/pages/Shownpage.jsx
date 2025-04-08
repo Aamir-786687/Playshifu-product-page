@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopBanner from '../Components/Navigation/Topbanner';
+import TopBanner from '../Components/Navigation/TopBanner';
 import Navbar from '../Components/Navigation/Navbar';
 import Menu from '../Components/Navigation/Menu';
 import ProductImages from '../Components/Product/ProductImages';
