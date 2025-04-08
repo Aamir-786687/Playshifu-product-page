@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import TopBanner from '../Components/Navigation/TopBanner';
 import Navbar from '../Components/Navigation/Navbar';
 import Menu from '../Components/Navigation/Menu';
 import ProductImages from '../Components/Product/ProductImages';
@@ -7,13 +6,14 @@ import ProductInfo from '../Components/Product/ProductInfo';
 import WhatsAppButton from '../Components/Common/WhatsAppButton';
 import Footer from '../Components/Footer';
 import ProductDetails from '../Components/Product/ProductDetails';
+import TopBar from '../Components/Navigation/TopBar';
 
 const ProductPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Fixed Navigation */}
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-        <TopBanner />
+        <TopBar />
         <Navbar />
         <Menu />
       </div>
