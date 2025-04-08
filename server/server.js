@@ -14,14 +14,16 @@ mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log("MongoDB connected"))
-.catch((err) => console.error("MongoDB connection error:", err));
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
 // Product Schema
 const productSchema = new mongoose.Schema({
   name: String,
+  subtitle: String,
+  rating: Number,
   price: Number,
-  description: String,
+  description: [String],
   features: [String],
   images: [String],
   specifications: {
@@ -76,9 +78,13 @@ const seedData = async () => {
     await Product.deleteMany({});
     const product = new Product({
       name: "Junior Genius Pack",
-      price: 49.99,
-      description:
-        "The Junior Genius Pack is an interactive learning kit that combines physical play with digital learning. Perfect for children aged 6-12, it helps develop STEM skills through fun activities and games. This educational toy makes learning engaging and enjoyable for kids.",
+      subtitle: "Plugo Count & Plugo Letter & Plugo Link",
+      rating: 4.5/5 ,
+      price: 3749,
+      description:[
+        "Plugo Count - An interactive math learning kit to master essential math skills, including addition, subtraction, multiplication, and division.",
+        "Plugo Letters - A letter toy that encourages children to spell using the toy to solve word puzzles on the screen.",
+        "Plugo Link - Build shapes using the magnetic tiles off-screen to solve puzzles on-screen!"],
       features: [
         "Interactive learning games and activities",
         "STEM-focused educational content",

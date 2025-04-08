@@ -8,13 +8,7 @@ import WhatsAppButton from '../Components/Common/WhatsAppButton';
 import Footer from '../Components/Footer';
 
 const ProductPage = () => {
-  const [selectedImage, setSelectedImage] = useState(0);
-  const images = [
-    '/junior-genius-pack.jpg',
-    '/thumbnail-1.jpg',
-    '/thumbnail-2.jpg',
-    '/thumbnail-3.jpg'
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -22,13 +16,9 @@ const ProductPage = () => {
       <Navbar />
       <Menu />
       
-      <main className="container mx-auto px-4 py-12">
-        <div className="flex gap-12 bg-white rounded-2xl p-8 shadow-lg">
-          <ProductImages 
-            images={images}
-            selectedImage={selectedImage}
-            setSelectedImage={setSelectedImage}
-          />
+      <main className="ml-55 mx-auto px-4 py-12">
+        <div className="flex gap-12 bg-white ">
+          <ProductImages />
           <ProductInfo />
         </div>
       </main>
