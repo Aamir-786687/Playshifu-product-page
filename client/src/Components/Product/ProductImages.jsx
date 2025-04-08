@@ -6,7 +6,7 @@ const ProductImages = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
+    axios.get("https://playshifu-product-page.onrender.com/api/products")
       .then(res => {
         setImages(res.data[0]?.images || []);
       })
