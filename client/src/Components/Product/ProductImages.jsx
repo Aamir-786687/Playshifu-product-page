@@ -28,7 +28,7 @@ const ProductImages = () => {
       <img
         src={images[index]}
         alt={`Product ${index + 1}`}
-        className="rounded shadow-md w-160 h-120 max-w-md"
+        className="rounded shadow-md max-w-md"
       />
       <div className="flex gap-4">
         <button

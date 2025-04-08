@@ -18,7 +18,7 @@ const ProductPage = () => {
       </div>
 
       {/* Main Content with padding to offset fixed nav */}
-      <main className="pt-[160px] ml-55 mx-auto px-4 py-12">
+      <main className="pt-[160px] mx-auto px-4 py-12">
         <div className="flex gap-12 bg-white rounded-2xl p-8 shadow-lg">
           <ProductImages />
           <ProductInfo />

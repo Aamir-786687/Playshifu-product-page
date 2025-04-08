@@ -10,6 +10,7 @@ import {
   BadgeCheck,
   Baby,
 } from "lucide-react";
+import ProductDetails from "./ProductDetails";
 
 const ProductInfo = () => {
   const [product, setProduct] = useState(null);
@@ -70,13 +71,13 @@ const ProductInfo = () => {
 
       {/* Features box under add ot cart button*/}
 
-      <div className="bg-purple-700 text-white rounded-xl w-110 p-5 mt-2">
+      <div className="bg-purple-700 text-white rounded-xl w-90 p-5 mt-2">
         <div className="flex flex-wrap justify-around items-center gap-2 mb-4">
           <div className="flex flex-col items-center text-center">
-            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-14 h-14 flex items-center justify-center text-xl font-bold">
               4-10
             </div>
-            <p className="mt-2 text-sm font-medium">
+            <p className="mt-2 text-[12px] ">
               Age
               <br />
               Group
@@ -84,10 +85,10 @@ const ProductInfo = () => {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-14 h-14 flex items-center justify-center">
               <Truck size={28} />
             </div>
-            <p className="mt-2 text-sm font-medium">
+            <p className="mt-2 text-[12px]">
               Free
               <br />
               Shipping
@@ -95,10 +96,10 @@ const ProductInfo = () => {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-14 h-14 flex items-center justify-center">
               <BadgeCheck size={28} />
             </div>
-            <p className="mt-2 text-sm font-medium">
+            <p className="mt-2 text-[12px]">
               6 months
               <br />
               warranty
@@ -106,10 +107,10 @@ const ProductInfo = () => {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-14 h-14 flex items-center justify-center">
               <Undo2 size={28} />
             </div>
-            <p className="mt-2 text-sm font-medium">
+            <p className="mt-2 text-[12px]">
               30 Day
               <br />
               Return
@@ -119,12 +120,14 @@ const ProductInfo = () => {
 
         <hr className="border-white opacity-50 mb-3" />
 
-        <ul className="list-disc pl-5 text-sm space-y-1">
+        <ul className="list-disc pl-5 text-[12px] space-y-1">
           <li>Device required. Not included with the toy.</li>
           <a href="#" className="hover:underline"><li>Check your device compatibility below.</li></a>
         </ul>
       </div>
+    <ProductDetails />
     </div>
+    
   );
 };
 
