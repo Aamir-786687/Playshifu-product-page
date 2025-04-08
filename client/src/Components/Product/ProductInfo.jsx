@@ -56,7 +56,7 @@ const ProductInfo = () => {
       <p className="text-xl text-green-600 font-semibold mb-4">
         ₹{product.price} <del className="text-gray-300">₹4999</del>
       </p>
-      <div className="mr-80 text-sm">
+      <div className="mr-70 text-sm">
         <h2 className="font-semibold text-lg mb-2">Description:</h2>
         <ul className="list-disc list-inside mb-4">
           {product.description.map((desc, index) => (
@@ -70,7 +70,7 @@ const ProductInfo = () => {
 
       {/* Features box under add ot cart button*/}
 
-      <div className="bg-purple-700 text-white rounded-xl w-120 p-5 mt-2">
+      <div className="bg-purple-700 text-white rounded-xl w-110 p-5 mt-2">
         <div className="flex flex-wrap justify-around items-center gap-2 mb-4">
           <div className="flex flex-col items-center text-center">
             <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold">
@@ -121,7 +121,7 @@ const ProductInfo = () => {
 
         <ul className="list-disc pl-5 text-sm space-y-1">
           <li>Device required. Not included with the toy.</li>
-          <li>Check your device compatibility below.</li>
+          <a href="#" className="hover:underline"><li>Check your device compatibility below.</li></a>
         </ul>
       </div>
     </div>

@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 const Menu = () => {
   return (
-    <div className="font-[Nunito] border-b pl-25 pr-25 bg-white px-6 shadow-sm">
+    <div className="font-[Nunito]  pl-25 pr-25 bg-white px-6 shadow-sm">
       <div className="container mx-auto">
         <div className="flex justify-between py-4 text-m relative">
 
