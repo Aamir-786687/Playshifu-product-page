@@ -1,7 +1,15 @@
 // src/components/ProductInfo.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Star, StarHalf ,Share  } from "lucide-react";
+import {
+  Star,
+  StarHalf,
+  Share,
+  Truck,
+  Undo2,
+  BadgeCheck,
+  Baby,
+} from "lucide-react";
 
 const ProductInfo = () => {
   const [product, setProduct] = useState(null);
@@ -19,10 +27,13 @@ const ProductInfo = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-2">{product.name} <span><Share /></span></h1> 
+      <h1 className="text-2xl font-semibold mb-2 flex items-center gap-18">
+        {product.name}
+        <Share className="w-5 h-5 text-black cursor-pointer" />
+      </h1>
+
       <h3 className=" text-blue-500 pb-1">{product.subtitle}</h3>
       <p>
-        {" "}
         <span className="flex mb-2">
           <Star />
           <Star />
@@ -53,7 +64,66 @@ const ProductInfo = () => {
           ))}
         </ul>
       </div>
-      <button className="bg-[#5f125c] text-white text-[10px] font-semibold p-2 rounded-full w-90">Add to Cart </button>
+      <button className="bg-[#5f125c] text-white text-[10px] font-semibold p-2 rounded-full w-90 mb-8">
+        Add to Cart{" "}
+      </button>
+
+      {/* Features box under add ot cart button*/}
+
+      <div className="bg-purple-700 text-white rounded-xl w-120 p-5 mt-2">
+        <div className="flex flex-wrap justify-around items-center gap-2 mb-4">
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold">
+              4-10
+            </div>
+            <p className="mt-2 text-sm font-medium">
+              Age
+              <br />
+              Group
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center">
+              <Truck size={28} />
+            </div>
+            <p className="mt-2 text-sm font-medium">
+              Free
+              <br />
+              Shipping
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center">
+              <BadgeCheck size={28} />
+            </div>
+            <p className="mt-2 text-sm font-medium">
+              6 months
+              <br />
+              warranty
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+            <div className="bg-yellow-400 text-purple-700 rounded-full w-16 h-16 flex items-center justify-center">
+              <Undo2 size={28} />
+            </div>
+            <p className="mt-2 text-sm font-medium">
+              30 Day
+              <br />
+              Return
+            </p>
+          </div>
+        </div>
+
+        <hr className="border-white opacity-50 mb-3" />
+
+        <ul className="list-disc pl-5 text-sm space-y-1">
+          <li>Device required. Not included with the toy.</li>
+          <li>Check your device compatibility below.</li>
+        </ul>
+      </div>
     </div>
   );
 };
