@@ -30,7 +30,7 @@ const ProductDetails = () => {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex justify-center items-start overflow-x-auto gap-6"
+          className="flex justify-center w-230  items-start overflow-x-auto gap-2"
         >
           {videos.map((videoSrc, index) => (
             <video
