@@ -49,17 +49,10 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model("Product", productSchema);
 
-
-
-
-app.get("/", async (req, res) => {
-  try {
-    res.json({"status":"working"});
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
+// Root Route
+app.get("/", (req, res) => {
+  res.json({ status: "working" });
 });
-
 
 // API Routes
 app.get("/api/products", async (req, res) => {
@@ -91,12 +84,13 @@ const seedData = async () => {
     const product = new Product({
       name: "Junior Genius Pack",
       subtitle: "Plugo Count & Plugo Letter & Plugo Link",
-      rating: 4.5/5 ,
+      rating: 4.5,
       price: 3749,
-      description:[
+      description: [
         "Plugo Count - An interactive math learning kit to master essential math skills, including addition, subtraction, multiplication, and division.",
         "Plugo Letters - A letter toy that encourages children to spell using the toy to solve word puzzles on the screen.",
-        "Plugo Link - Build shapes using the magnetic tiles off-screen to solve puzzles on-screen!"],
+        "Plugo Link - Build shapes using the magnetic tiles off-screen to solve puzzles on-screen!"
+      ],
       features: [
         "Interactive learning games and activities",
         "STEM-focused educational content",
@@ -108,11 +102,11 @@ const seedData = async () => {
         "Compatible with iOS and Android devices"
       ],
       images: [
-        "https://www.playshifu.com/_next/image?url=https%3A%2F%2Fd3no6xaq2ua3a6.cloudfront.net%2Fimages%2Fskus%2Fjunior-genius-pack%2Fcarousal%2Fcarousal-1.webp&w=640&q=100",
-        "https://www.playshifu.com/_next/image?url=https%3A%2F%2Fd3no6xaq2ua3a6.cloudfront.net%2Fimages%2Fskus%2Fjunior-genius-pack%2Fcarousal%2Fcarousal-3.webp&w=640&q=100",
-        "https://www.playshifu.com/_next/image?url=https%3A%2F%2Fd3no6xaq2ua3a6.cloudfront.net%2Fimages%2Fskus%2Fjunior-genius-pack%2Fcarousal%2Fcarousal-4.webp&w=640&q=100",
-        "https://www.playshifu.com/_next/image?url=https%3A%2F%2Fd3no6xaq2ua3a6.cloudfront.net%2Fimages%2Fskus%2Fjunior-genius-pack%2Fcarousal%2Fcarousal-6.webp&w=640&q=100",
-        "https://www.playshifu.com/_next/image?url=https%3A%2F%2Fd3no6xaq2ua3a6.cloudfront.net%2Fimages%2Fskus%2Fjunior-genius-pack%2Fcarousal%2Fcarousal-7.webp&w=640&q=100"
+        "https://d3no6xaq2ua3a6.cloudfront.net/images/skus/junior-genius-pack/carousal/carousal-1.webp",
+        "https://d3no6xaq2ua3a6.cloudfront.net/images/skus/junior-genius-pack/carousal/carousal-3.webp",
+        "https://d3no6xaq2ua3a6.cloudfront.net/images/skus/junior-genius-pack/carousal/carousal-4.webp",
+        "https://d3no6xaq2ua3a6.cloudfront.net/images/skus/junior-genius-pack/carousal/carousal-6.webp",
+        "https://d3no6xaq2ua3a6.cloudfront.net/images/skus/junior-genius-pack/carousal/carousal-7.webp"
       ],
       specifications: {
         age: "6-12 years",
@@ -145,28 +139,28 @@ const seedData = async () => {
         {
           id: "1",
           name: "Math Genius Pack",
-          price: 39.99,
-          image: "/assets/images/math-genius-pack.jpg"
+          price: 3999,
+          image: "https://example.com/images/math-genius-pack.jpg"
         },
         {
           id: "2",
           name: "Science Explorer Kit",
-          price: 44.99,
-          image: "/assets/images/science-explorer-kit.jpg"
+          price: 4499,
+          image: "https://example.com/images/science-explorer-kit.jpg"
         },
         {
           id: "3",
           name: "Language Learning Pack",
-          price: 34.99,
-          image: "/assets/images/language-learning-pack.jpg"
+          price: 3499,
+          image: "https://example.com/images/language-learning-pack.jpg"
         }
       ]
     });
 
     await product.save();
-    console.log(" Data seeded successfully");
+    console.log("✅ Data seeded successfully");
   } catch (error) {
-    console.error(" Error seeding data:", error);
+    console.error("❌ Error seeding data:", error);
   }
 };
 
